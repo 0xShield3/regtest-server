@@ -188,7 +188,7 @@ module.exports = function (router, callback) {
     router.post('/p/rpc', bodyParser.json(), (req, res) => {
         rpc(req.body.method, req.body.params || [], (err, result) => {
             if (err)
-                return res.easy({
+                return res.easy(null, {
                     result: null,
                     error: {
                         code: err.code || 400,
