@@ -43,6 +43,7 @@ RUN chmod +x install_leveldb.sh && \
   chmod +x run_regtest_app.sh && \
   ./install_leveldb.sh
 
+ARG CACHEBUST=1
 RUN git clone https://github.com/0xShield3/regtest-server.git
 WORKDIR /root/regtest-server
 
