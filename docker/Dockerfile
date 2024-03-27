@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-MAINTAINER Jonathan Underwood
 
 RUN apt update && apt install -y software-properties-common
 
