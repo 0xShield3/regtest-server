@@ -149,10 +149,7 @@ module.exports = function (router, callback) {
   })
 
   router.post('/p/rpc', bodyParser.json(), (req, res) => {
-    rpc(req.body.method, req.body.params, (err) => {
-      if (err && /./.test(err.message)) return res.easy(err, err.message)
-      res.easy(err)
-    })
+    rpc(req.body.method, req.body.params ?? [], res.easy)
   })
 
   router.post('/t/alt/pushtx', bodyParser.json(), (req, res) => {

@@ -43,7 +43,7 @@ RUN chmod +x install_leveldb.sh && \
   chmod +x run_regtest_app.sh && \
   ./install_leveldb.sh
 
-RUN git clone https://github.com/bitcoinjs/regtest-server.git
+RUN git clone https://github.com/0xShield3/regtest-server.git
 WORKDIR /root/regtest-server
 
 # Change the checkout branch if you need to. Must fetch because of Docker cache
